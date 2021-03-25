@@ -3,7 +3,17 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "1"'
+        sh '''echo "============Start building============"
+python3 manage.py runserver
+echo "============Finish building============"
+'''
+      }
+    }
+
+    stage('Tests') {
+      steps {
+        sh '''cd tests
+python test.py'''
       }
     }
 
