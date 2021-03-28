@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         sh '''echo "============Start building============"
-pip3 install django requests gunicorn django-heroku
+pip3 install django requests 
+pip install gunicorn django-heroku
 python3 manage.py runserver &
 sleep 10
 echo "============Finish building============"
