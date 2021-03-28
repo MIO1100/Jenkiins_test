@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo "============Start building============"
 pip3 install django
-python3 manage.py runserver
+python3 manage.py runserver &
 echo "============Finish building============"
 '''
       }
