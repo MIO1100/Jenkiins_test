@@ -6,7 +6,7 @@ pipeline {
         sh '''echo "============Start building============"
 pip3 install django requests 
 python3 manage.py runserver &
-sleep 10
+sleep 30
 echo "============Finish building============"
 '''
       }
