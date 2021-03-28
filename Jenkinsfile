@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''echo "============Start building============"
-pip3 install django requests 
+pip3 install django requests==2.21.0
 python3 manage.py runserver &
 sleep 30
 echo "============Finish building============"
