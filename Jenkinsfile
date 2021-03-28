@@ -14,7 +14,7 @@ echo "============Finish building============"
       steps {
         sh '''cd tests
 sleep 40
-python3 test.py '''
+curl -Is http://127.0.0.1:8000 | head -1'''
       }
     }
 
