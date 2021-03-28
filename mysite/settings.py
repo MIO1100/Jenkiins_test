@@ -24,7 +24,7 @@ SECRET_KEY = "werghgfnvcdewftrhgfnbdfegrhnhbfvghnhvdfgngfh bcvvdsbngf bcvcbfdngf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','vacad22.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','jenkinstest1.herokuapp.com']
 
 
 # Application definition
