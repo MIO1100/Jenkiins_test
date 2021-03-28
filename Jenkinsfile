@@ -12,9 +12,14 @@ echo "============Finish building============"
 
     stage('Tests') {
       steps {
-        sh '''cd tests
-sleep 40
-curl -Is http://127.0.0.1:8000 | head -1'''
+        sh '''sleep 40
+
+if curl -sL --fail  http://127.0.0.1:8000 -o /dev/null; then
+    echo "Success"
+else
+    echo "Fail"
+    exit 1
+fi'''
       }
     }
 
