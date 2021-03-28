@@ -5,7 +5,6 @@ pipeline {
       steps {
         sh '''echo "============Start building============"
 pip3 install django requests 
-pip install gunicorn django-heroku
 python3 manage.py runserver &
 sleep 10
 echo "============Finish building============"
