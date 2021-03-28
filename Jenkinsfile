@@ -13,8 +13,8 @@ echo "============Finish building============"
     stage('Tests') {
       steps {
         sh '''cd tests
-sleep 10
-python3 test.py'''
+sleep 40
+python3 test.py '''
       }
     }
 
