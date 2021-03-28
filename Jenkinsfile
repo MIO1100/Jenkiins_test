@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''echo "============Start building============"
-python3 manage.py runserver &
+python3 manage.py runserver 
 echo "============Finish building============"
 '''
       }
