@@ -30,7 +30,7 @@ git checkout deploy
 
 git merge main
 
-git push'''
+git push --set-upstream origin deploy'''
       }
     }
 
