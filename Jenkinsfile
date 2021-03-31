@@ -17,9 +17,9 @@ echo "============Finish building============"'''
       steps {
         sh '''sleep 40
 '''
-        sh '''#!/bin/bash
-cd tests
-python3 test.py'''
+        sh '''cd tests
+'''
+        sh 'python3 test.py'
       }
     }
 
