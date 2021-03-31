@@ -26,7 +26,7 @@ echo "============Finish building============"'''
       steps {
         sh '''git branch -a
 
-git checkout -b deploy
+git checkout deploy
 
 git merge main
 
