@@ -15,7 +15,7 @@ echo "============Finish building============"'''
 
     stage('Tests') {
       steps {
-        sh '''sleep 40
+        sh '''sleep 10
 '''
         sh '''xterm -e "python3 tests/test.py && /bin/tcsh" &
 '''
@@ -24,7 +24,9 @@ echo "============Finish building============"'''
 
     stage('Deploy') {
       steps {
-        sh '''git branch
+        sh '''git branch -avv
+
+git branch
 
 git checkout deploy
 
