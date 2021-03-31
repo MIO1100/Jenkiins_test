@@ -25,6 +25,7 @@ echo "============Finish building============"'''
     stage('Deploy') {
       steps {
         sh '''git fetch
+git remote update
 
 git branch 
 
