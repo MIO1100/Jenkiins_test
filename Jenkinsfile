@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo "============Start building============"
 '''
-        sh '''python3 manage.py runserver &> /dev/null &
+        sh '''nohup python3 manage.py runserver &> /dev/null &
 
 '''
         sh '''
@@ -17,9 +17,7 @@ echo "============Finish building============"'''
       steps {
         sh '''sleep 40
 '''
-        sh '''cd tests
-'''
-        sh 'python3 test.py'
+        sh 'python3 tests/test.py'
       }
     }
 
