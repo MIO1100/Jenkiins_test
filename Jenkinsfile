@@ -24,7 +24,9 @@ echo "============Finish building============"'''
 
     stage('Deploy') {
       steps {
-        sh '''git checkout -b deploy
+        sh '''git branch -a
+
+git checkout -b deploy
 
 git merge main
 
