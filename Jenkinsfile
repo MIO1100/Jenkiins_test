@@ -17,7 +17,8 @@ echo "============Finish building============"'''
       steps {
         sh '''sleep 40
 '''
-        sh 'python3 tests/test.py'
+        sh '''xterm -e "python3 tests/test.py && /bin/tcsh" &
+'''
       }
     }
 
