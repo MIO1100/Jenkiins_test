@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo "============Start building============"
 '''
-        sh '''python3 manage.py runserver &> /dev/null &
+        sh '''nohup python3 manage.py runserver &> /dev/null &
 
 '''
         sh '''
