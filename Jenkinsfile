@@ -27,10 +27,9 @@ echo "============Finish building============"'''
         sh '''git fetch
 git remote update
 
-git branch 
+git branch -a
 
-
-git checkout deploy
+git checkout --track origin/deploy
 
 git merge main
 
