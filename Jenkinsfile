@@ -24,12 +24,11 @@ echo "============Finish building============"'''
 
     stage('Deploy') {
       steps {
-        sh '''git fetch
-git remote update
+        sh '''
 
 git branch -a
 
-git checkout --track origin/deploy
+git fetch && git checkout deploy
 
 git merge main
 
