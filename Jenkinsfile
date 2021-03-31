@@ -24,7 +24,9 @@ python3 test.py'''
 
     stage('Deploy') {
       steps {
-        sh '''git checkout deploy
+        sh '''cd ..
+
+git checkout deploy
 
 git merge main
 
