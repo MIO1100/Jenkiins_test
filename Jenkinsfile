@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo "============Start building============"
 '''
-        sh ''' python3 run.py '''
+        sh ' python3 run.py '
         sh '''
 echo "============Finish building============"'''
       }
@@ -28,7 +28,8 @@ git checkout deploy
 git merge main
 
 git config --local credential.helper "!f() { echo username=\\$GIT_AUTH_USR; echo password=\\$GIT_AUTH_PSW; }; f"
-                    git push origin HEAD:$TARGET_BRANCH
+
+git push 
 
 '''
       }
