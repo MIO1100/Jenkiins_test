@@ -7,4 +7,6 @@ process = subprocess.Popen(['python3', 'manage.py','runserver'], stdout=subproce
 
 time.sleep(10)
 test = subprocess.Popen(['python3', 'tests/test.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
+if test=='error':
+    raise Exception("ERROR")
+else: print("OK")
