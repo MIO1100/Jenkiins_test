@@ -15,19 +15,17 @@ echo "============Finish building============"'''
 
     stage('Tests') {
       steps {
-        sh '''sleep 40
-'''
-        sh 'python3 tests/test.py'
+        sh 'sleep 10'
+        sh 'start python3 tests/test.py'
       }
     }
 
     stage('Deploy') {
-    environment {
-                GIT_AUTH = credentials('0fd028b5-abd2-4320-91ed-3c6a868b9019')
-            }
+      environment {
+        GIT_AUTH = credentials('0fd028b5-abd2-4320-91ed-3c6a868b9019')
+      }
       steps {
-        sh '''cd ..
-
+        sh '''
 git checkout deploy
 
 git merge main
