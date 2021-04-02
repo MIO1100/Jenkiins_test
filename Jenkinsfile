@@ -16,7 +16,7 @@ echo "============Finish building============"'''
     stage('Tests') {
       steps {
         sh 'sleep 10'
-        sh 'start python3 tests/test.py'
+        sh 'xterm -e python3 tests/test.py && /bin/tcsh'
       }
     }
 
