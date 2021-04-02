@@ -16,7 +16,7 @@ echo "============Finish building============"'''
     stage('Tests') {
       steps {
         sh 'sleep 10'
-        sh 'Dispaly=:0 xterm -e python3 tests/test.py'
+        sh 'Dispaly=:0 sudo xterm -e python3 tests/test.py'
       }
     }
 
