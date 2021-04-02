@@ -5,9 +5,7 @@ pipeline {
       steps {
         sh '''echo "============Start building============"
 '''
-        sh '''nohup python3 manage.py runserver &> /dev/null &
-
-'''
+        sh ''' python3 run.py '''
         sh '''
 echo "============Finish building============"'''
       }
@@ -16,7 +14,6 @@ echo "============Finish building============"'''
     stage('Tests') {
       steps {
         sh 'sleep 10'
-        sh 'Dispaly=:0 sudo xterm -e python3 tests/test.py'
       }
     }
 
