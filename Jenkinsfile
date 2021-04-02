@@ -29,7 +29,7 @@ git merge main
 
 git config --local credential.helper "!f() { echo username=\\$GIT_AUTH_USR; echo password=\\$GIT_AUTH_PSW; }; f"
 
-git push 
+git push --set-upstream origin deploy
 
 '''
       }
