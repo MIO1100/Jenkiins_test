@@ -23,7 +23,7 @@ echo "============Finish building============"'''
 
     stage('Deploy') {
     environment {
-                GIT_AUTH = credentials('support-team-up')
+                GIT_AUTH = credentials('0fd028b5-abd2-4320-91ed-3c6a868b9019')
             }
       steps {
         sh '''cd ..
